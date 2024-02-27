@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +9,7 @@ import { Input } from '../../components/Input';
 import { Section } from '../../components/Section';
 import { NoteItem } from '../../components/NoteItem';
 import { Button } from '../../components/Button'
+import { ButtonText } from "../../components/ButtonText";
 
 import { api } from "../../services/api";
 
@@ -47,6 +47,11 @@ export function NoteCreate(){
     function handleRemoveTag(deleted){
         setTags(prevState => prevState.filter(tag => tag !== deleted));
     }
+
+    //Navegação de voltar
+    function handleBack(){
+        navigate(-1)
+      }
     
     async function handleNewNote(){
         if (!title){
@@ -70,7 +75,7 @@ export function NoteCreate(){
         });
 
         alert("Nota criada com sucesso.");
-        navigate("/");
+        navigate(-1);
     }
 
     return (
@@ -80,8 +85,8 @@ export function NoteCreate(){
             <main>
                 <Form>
                     <header>
-                        <h2>Criar nota</h2>
-                        <Link to="/">voltar</Link>
+                        <h1>Criar nota</h1>
+                        <ButtonText title="Voltar" onClick={handleBack}/>
                     </header>
 
                     <Input 

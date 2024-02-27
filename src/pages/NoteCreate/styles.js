@@ -6,21 +6,21 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-rows: 105px auto;
-  grid-template-areas: 
-  "header"
-  "content";
+  grid-template-areas:
+    'header'
+    'content';
 
   > main {
     grid-area: content;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
-    width: 10px; // largura do scroll
-    background-color: transparent; 
+      width: 10px; // largura do scroll
+      background-color: transparent;
     }
 
     &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3); //cor 30% de opacidade do scroll
+      background-color: rgba(0, 0, 0, 0.3); //cor 30% de opacidade do scroll
     }
   }
 
@@ -32,21 +32,19 @@ export const Container = styled.div`
 `
 
 export const Form = styled.form`
-    max-width: 550px;
-    margin: 38px auto;
+  max-width: 550px;
+  margin: 38px auto;
 
-    > header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        margin-bottom: 36px;
+    margin-bottom: 36px;
 
-        a {
-            font-size: 20px;
-            color: ${({ theme }) => theme.COLORS.GRAY_100};
-        }
+    button {
+      font-size: 20px;
+      color: ${({ theme }) => theme.COLORS.GRAY_100};
     }
-
-    
+  }
 `

@@ -18,13 +18,18 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_100};
       font-size: 24px;
     }
+
+    button {
+      background: none;
+      border: none;
+    }
   }
 
-    @media screen and (max-width: 660px) {
-        > header {
-            padding: 0 60px; 
-        }
+  @media screen and (max-width: 660px) {
+    > header {
+      padding: 0 60px;
     }
+  }
 `
 
 export const Form = styled.form`
@@ -44,8 +49,8 @@ export const Avatar = styled.div`
   height: 186px;
 
   > img {
-    width: 186px;
-    height: 186px;
+    width: 100%; /* Adicionando esta linha */
+    height: 100%; /* Adicionando esta linha */
 
     border-radius: 50%;
   }
