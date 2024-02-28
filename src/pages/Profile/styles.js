@@ -24,12 +24,6 @@ export const Container = styled.div`
       border: none;
     }
   }
-
-  @media screen and (max-width: 660px) {
-    > header {
-      padding: 0 60px;
-    }
-  }
 `
 
 export const Form = styled.form`
@@ -51,6 +45,9 @@ export const Avatar = styled.div`
   > img {
     width: 100%; /* Adicionando esta linha */
     height: 100%; /* Adicionando esta linha */
+
+    object-fit: cover; /* Impede que a imagem seja esticada e mantém sua proporção */
+    object-position: center; /* Centraliza a imagem dentro do contêiner */
 
     border-radius: 50%;
   }
